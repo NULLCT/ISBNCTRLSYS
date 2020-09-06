@@ -2,6 +2,7 @@
 #include "ofMain.h"
 
 int main() {
+  ofSetEscapeQuitsApp(false);
   ofGLFWWindowSettings settings; // OpenFrameWorks setting
 
   settings.title =
