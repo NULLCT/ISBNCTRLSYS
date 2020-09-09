@@ -62,7 +62,7 @@ private:
 
   /*Piyo*/
   Piyo piyo[10];
-  bool piyotr = false;
+  bool piyotr = true;
 
   /*Me*/
   ofImage me;

@@ -3,7 +3,7 @@
 #include "ofLog.h"
 #include <climits>
 #include <string>
-#define DEBUG_SHOWMOUSEPOS
+//#define DEBUG_SHOWMOUSEPOS
 //#define DEBUG_NOLOADJAPANESE
 
 using namespace std;
