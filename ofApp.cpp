@@ -153,8 +153,11 @@ void ofApp::draw() {
   }
 
   showUnixTime(font16);
-
-  piyo.run();
+  
+  if (piyotr) {
+    for (int i = 0; i < 10; i++)
+      piyo[i].run();
+  }
 
 #ifdef DEBUG_SHOWMOUSEPOS
   showMousePos(font16);
@@ -165,6 +168,10 @@ void ofApp::draw() {
 void ofApp::keyPressed(int key) {
   if (key == 'h') {
     screen = 0;
+  }
+
+  if (key == 'p') {
+    piyotr = !piyotr;
   }
 
   if (screen == 1) {

@@ -61,7 +61,8 @@ private:
   ofTrueTypeFont font16;   // Font for ofApp::showunixtime()
 
   /*Piyo*/
-  Piyo piyo;
+  Piyo piyo[10];
+  bool piyotr = false;
 
   /*Me*/
   ofImage me;

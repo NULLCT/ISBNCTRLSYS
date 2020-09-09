@@ -2,6 +2,7 @@
 #include "ofMain.h"
 
 int main() {
+  srand(time(NULL));
   ofSetEscapeQuitsApp(false);
   ofGLFWWindowSettings settings; // OpenFrameWorks setting
 
