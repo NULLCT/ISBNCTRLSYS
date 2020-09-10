@@ -267,7 +267,7 @@ void ofApp::buttonSet() {
                 ofColor(0x28, 0x28, 0x28), font32jp, u8"入力\n削除");
 
   couponnumsetter.set(800, 50, 350, 75, 0, INT_MAX, ofColor(0xa8, 0x99, 0x84),
-                      font16);
+                      font32jp);
 
   subtotal.set(800, 150, 350, 50, ofColor(0xeb, 0xdb, 0xb2),
                ofColor(0x28, 0x28, 0x28), font32jp, u8"小計:0円");
