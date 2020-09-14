@@ -42,6 +42,10 @@ private:
   /*Screen control*/
   int screen = 0; // 0=>welcome page, 1=>sold page
 
+  /*Splash Image*/
+  ofImage splash;
+  int splashtime = 120;
+
   /*ISBN Date*/
   vector<string> isbnraw;      // List of isbn numbers in shop (isbnraw.txt)
   vector<string> isbnsold;     // List of sold book's isbn (isbnsold.txt)

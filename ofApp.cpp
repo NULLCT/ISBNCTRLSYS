@@ -15,6 +15,8 @@ void ofApp::setup() {
 
   /*Me*/
   me.load("icon.png");
+  /*Splash*/
+  splash.load("splash.png");
 
   /*Load files*/
   // Put logo
@@ -109,6 +111,20 @@ void ofApp::update() {}
 
 //--------------------------------------------------------------
 void ofApp::draw() {
+  if (0 < splashtime) {
+    splashtime--;
+    if (splashtime < 30)
+      ofColor(0, 0, 0, (splashtime / 30.0) * 255);
+    else
+      ofColor(0, 0, 0);
+
+    ofSetWindowShape(splash.getWidth(), splash.getHeight());
+    splash.draw(0, 0, ofGetWidth(), ofGetHeight());
+
+    if (splashtime == 0)
+      ofSetWindowShape(1200, 600);
+    return;
+  }
   if (screen == 0) { // Welcome page
     ofBackground(ofColor(0x28, 0x28, 0x28));
     if (welcome.run()) {
