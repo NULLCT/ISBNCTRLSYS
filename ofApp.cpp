@@ -230,6 +230,11 @@ void ofApp::keyPressed(int key) {
       fullscreentr = !fullscreentr;
       ofSetFullscreen(fullscreentr);
     }
+
+    if (key == ofKey::OF_KEY_F1) {
+      notification.notice(ofColor(0xcc, 0x24, 0x1d), ofColor(0xeb, 0xdb, 0xb2),
+        u8"へルプがあると思ったか!バカめ!");
+    }
   }
 }
 
