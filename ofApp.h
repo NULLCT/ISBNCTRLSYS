@@ -41,6 +41,7 @@ public:
 private:
   /*Screen control*/
   int screen = 0; // 0=>welcome page, 1=>sold page
+  bool fullscreentr = false;
 
   /*Splash Image*/
   ofImage splash;
@@ -65,7 +66,7 @@ private:
   ofTrueTypeFont font16;   // Font for ofApp::showunixtime()
 
   /*Piyo*/
-  Piyo piyo[10];
+  Piyo piyo[15];
   bool piyotr = true;
 
   /*Me*/

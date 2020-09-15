@@ -1,5 +1,7 @@
 ﻿#include "ofApp.h"
+#include "ofAppRunner.h"
 #include "ofColor.h"
+#include "ofGraphics.h"
 #include "ofLog.h"
 #include <climits>
 #include <string>
@@ -118,11 +120,8 @@ void ofApp::draw() {
     else
       ofColor(0, 0, 0);
 
-    ofSetWindowShape(splash.getWidth(), splash.getHeight());
     splash.draw(0, 0, ofGetWidth(), ofGetHeight());
 
-    if (splashtime == 0)
-      ofSetWindowShape(1200, 600);
     return;
   }
   if (screen == 0) { // Welcome page
@@ -169,9 +168,9 @@ void ofApp::draw() {
   }
 
   showUnixTime(font16);
-  
+
   if (piyotr) {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 15; i++)
       piyo[i].run();
   }
 
@@ -221,6 +220,15 @@ void ofApp::keyPressed(int key) {
         isbnshowliststartpos =
             max(0, int(isbnlist.size()) - 5); // Update isbnsholiststartpos
       }
+    }
+
+    if (key == ofKey::OF_KEY_ESC) {
+      removeISBNShowList();
+    }
+
+    if (key == ofKey::OF_KEY_F11) {
+      fullscreentr = !fullscreentr;
+      ofSetFullscreen(fullscreentr);
     }
   }
 }
