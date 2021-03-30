@@ -1,7 +1,8 @@
-
 # ISBNCTRLSYS
 
 ## 納期は9/7
+
+![screenshot](scs.png)
 
 ### 使い方
 
