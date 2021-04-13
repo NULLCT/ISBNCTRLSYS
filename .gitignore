@@ -1,3 +1,5 @@
-.clangd/
-compile_commands.json
-
+.vs
+obj
+/bin/*
+!/bin/data
+/bin/data/isbn*
